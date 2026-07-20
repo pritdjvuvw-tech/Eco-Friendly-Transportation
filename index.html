@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Make Transportation Eco Friendly</title>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#home"><i class="home"></i> Home</a></li>
+        <li><a href="#about"><i class="about"></i> About</a></li>
+        <li><a href="#calculator"><i class="calculator"></i> CO<sub>2</sub> Calculator</a></li>
+        <li><a href="#tip"><i class="tips"></i> Tips</a></li>
+        <li><a href="#benefits"><i class="benefits"></i> Benefits</a></li>
+      </ul>
+    </nav>
+  </header>
+    <!-- Home Page -->
+  <div class="hero-content" id="home">
+    
+    <h1>Eco‑Friendly Transportation:</h1>
+    <h2>Innovative Green Solutions</h2>
+    <p> Inspiring sustainable mobility for a greener future</p>
+  </div>
+
+   <!-- About Page -->
+  <section id="about">
+    <h2 class="section-title">About Green Mobility</h2>
+    <div class="card-grid">
+      <div class="card">
+    
+        <h3>Clean Energy</h3>
+        <p>Electric vehicles, hydrogen, and solar‑powered transport reduce dependence on fossil fuels.</p>
+      </div>
+      <div class="card">
+   
+        <h3>Shared Mobility</h3>
+        <p>Carpooling, ride‑sharing, and bike‑sharing cut emissions and traffic congestion.</p>
+      </div>
+      <div class="card">
+      
+        <h3>Low‑impact Infrastructure</h3>
+        <p>Green roads, bike lanes, and urban forests make cities healthier and more liveable.</p>
+      </div>
+    </div>
+  </section>
+
+   <!-- Calculator Page -->
+  <section id="calculator">
+    <h2 class="section-title"> CO<sub>2</sub> Calculator</h2>
+    <div class="calc-wrapper">
+      <p style="margin-bottom: 0.5rem; font-weight: 500;"> Estimate your trip's carbon footprint</p>
+      <div class="input-group">
+        <label for="transportMode"> Transport</label>
+        <select id="transportMode">
+          <option value="car">Car (gasoline)</option>
+          <option value="electric">Electric car</option>
+          <option value="hybrid">Hybrid car</option>
+          <option value="bus">Bus / tram</option>
+          <option value="bicycle">Bicycle</option>
+          <option value="walk">Walking</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="distance"> Distance (km)</label>
+        <input type="number" id="distance" value="15" min="0.1" step="0.5">
+      </div>
+      <div class="btn-container">
+      <button class="calc-btn" id="calcBtn">Calculate CO₂</button>
+      </div>
+      <div class="result-box" id="resultDisplay">
+        <span id="resultValue">—</span> kg CO₂ equivalent
+      </div>
+     
+    </div>
+  </section>
+
+ <!-- Tips Page Section -->
+  <section id="tip">
+    <h2 class="section-title">Tips for Green Mobility</h2>
+    <div class="tip-item"><strong>1. Cycle or walk</strong> — for short trips, choose active transport. It’s zero‑emission and healthy.</div>
+    <div class="tip-item"><strong>2. Share rides</strong> — carpooling with colleagues or friends cuts emissions per person dramatically.</div>
+    <div class="tip-item"><strong>3. Go electric</strong> — if you drive, consider an EV or plug‑in hybrid. Charge with green energy.</div>
+    <div class="tip-item"><strong>4. Use public transport</strong> — buses, trams, and trains are far more efficient per passenger.</div>
+    <div class="tip-item"><strong>5. Plan efficient routes</strong> — combine errands, avoid traffic, and reduce unnecessary mileage.</div>
+  </section>
+
+ <!-- Benefits Page Section -->
+  <section id="benefits">
+    <h2 class="section-title"> Benefits of Green Transport</h2>
+    <div class="benefit-item"> <strong>Cleaner air</strong> — reduced NOx and particulate matter improve respiratory health.</div>
+    <div class="benefit-item"> <strong>Less noise</strong> — electric and non‑motorized transport creates quieter cities.</div>
+    <div class="benefit-item"> <strong>Cost savings</strong> — less fuel, maintenance, and parking expenses.</div>
+    <div class="benefit-item"> <strong>Efficiency</strong> — dedicated lanes and shared mobility reduce travel time.</div>
+    <div class="benefit-item"> <strong>Climate action</strong> — lower greenhouse gas emissions help combat global warming.</div>
+  </section>
+
+  <footer>
+    <p>  Eco‑Friendly Transportation · 2026</i>  <br>Innovative green solutions for a sustainable future.</p>
+  </footer>
+
+</body>
+<script src="script.js"></script>
+
+</html>
