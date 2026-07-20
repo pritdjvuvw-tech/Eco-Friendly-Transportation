@@ -4,11 +4,6 @@
       const calcBtn = document.getElementById('calcBtn');
       const resultSpan = document.getElementById('resultValue');
 
-   
-      console.log('Mode select:', modeSelect);
-      console.log('Distance input:', distanceInput);
-      console.log('Calculate button:', calcBtn);
-      console.log('Result span:', resultSpan);
 
    
       const emissionFactors = {
@@ -22,12 +17,10 @@
 
 
       function calculateEmissions() {
-        console.log('Calculate function called!'); 
         
         const mode = modeSelect.value;
         const dist = parseFloat(distanceInput.value);
         
-        console.log('Mode:', mode, 'Distance:', dist); 
         
         if (isNaN(dist) || dist < 0) {
           resultSpan.textContent = '0.0';
@@ -38,34 +31,27 @@
         const co2 = factor * dist;
         resultSpan.textContent = co2.toFixed(2);
         
-        console.log('CO2 calculated:', co2.toFixed(2)); 
       }
 
 
       calcBtn.addEventListener('click', function(e) {
-        console.log('Button clicked!'); 
         calculateEmissions();
       });
 
       distanceInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
-          console.log('Enter key pressed!');
           calculateEmissions();
         }
       });
 
       modeSelect.addEventListener('change', function() {
-        console.log('Mode changed!'); 
         calculateEmissions();
       });
 
-    
-      console.log('Page loaded, running initial calculation');
       calculateEmissions();
 
     
       calcBtn.onclick = function() {
-        console.log('Button clicked via onclick property!');
         calculateEmissions();
       };
 
