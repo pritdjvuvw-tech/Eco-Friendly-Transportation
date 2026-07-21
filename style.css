@@ -1,4 +1,4 @@
-    * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -160,7 +160,296 @@
       color: #2d4a3a;
     }
 
+h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1a3a22;
+            margin-bottom: 0.5rem;
+        }
 
+        .subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #2d5a2d;
+            margin-bottom: 2rem;
+        }
+
+        /* Sections */
+        section {
+            width: 100%;
+            padding: 2rem 1.5rem;
+            background: #ffffffd0;
+            border-radius: 32px;
+            box-shadow: 0 12px 30px rgba(0, 30, 10, 0.08);
+            margin-bottom: 2rem;
+            border: 1px solid #d4ebd4;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a3a22;
+            border-left: 6px solid #2d7a3d;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+    .calc-btn {
+      background: #1e4d3a;
+      color: white;
+      border: none;
+      padding: 0.8rem 2.2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 10px rgba(30, 77, 58, 0.3);
+    }
+
+    .calc-btn:hover {
+      background: #2b6b4f;
+      transform: scale(1.02);
+      box-shadow: 0 6px 14px rgba(30, 77, 58, 0.4);
+    }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            margin: 0.8rem 0 1rem;
+            max-width: 380px;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            color: #17331f;
+            letter-spacing: 0.3px;
+        }
+
+        .input-group input,
+        .input-group select {
+            padding: 0.7rem 1rem;
+            border: 1px solid #accfaa;
+            border-radius: 40px;
+            font-size: 1rem;
+            background: white;
+            transition: 0.2s;
+            outline: none;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #1f732f;
+            box-shadow: 0 0 0 3px #b5e0b0;
+        }
+
+        .input-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+            align-items: flex-end;
+        }
+
+        /* Buttons */
+        button {
+            background: #1e562b;
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 2.2rem;
+            border-radius: 60px;
+            font-size: 1.05rem;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 40, 0, 0.2);
+            border: 1px solid #38944a;
+        }
+
+        button:hover {
+            background: #13421e;
+            transform: scale(1.01);
+            box-shadow: 0 8px 18px rgba(20, 80, 20, 0.25);
+        }
+
+        .btn-reward {
+            background: #deb36f;
+            color: #060d06;
+            border-color: #d4952a;
+            box-shadow: 0 4px 8px rgba(180, 120, 20, 0.3);
+        }
+
+        .btn-reward:hover {
+            background: #e6a33a;
+            color: #0f2a0f;
+        }
+
+        .btn-map {
+            background: #4285f4;
+            color: white;
+            border-color: #3367d6;
+            box-shadow: 0 4px 8px rgba(66, 133, 244, 0.3);
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-map:hover {
+            background: #3367d6;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 0.3rem;
+        }
+
+             .result-box {
+            margin-top: 1.2rem;
+            padding: 1rem 1.5rem;
+            background: #f2fcf2;
+            border-radius: 48px;
+            border-left: 6px solid #1c862c;
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #0b2f14;
+            box-shadow: inset 0 1px 6px #c2e0c2;
+            min-height: 4.5rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.3rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .result-box.hidden-suggestion {
+            opacity: 0.7;
+            border-left-color: #aacfaa;
+            background: #f5faf5;
+        }
+
+        .result-box.hidden-suggestion .suggestion-content {
+            display: none;
+        }
+
+        .result-box .suggestion-content {
+            display: block;
+            width: 100%;
+        }
+
+        .badge-rating {
+            background: #1f542b;
+            color: white;
+            padding: 0.25rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .reward-badge {
+            background: #8d6628;
+            color: #1d3a1d;
+            padding: 0.3rem 1.2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            border: 1px solid #dba53a;
+        }
+
+        .total-points-badge {
+            background: #53ad79;
+            color: #c1b792;
+            padding: 0.3rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 2px solid #f5b042;
+        }
+
+        .result-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .result-row-bottom {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 0.3rem;
+            border-top: 1px dashed #b8d9b8;
+            padding-top: 0.5rem;
+        }
+
+        .map-link {
+            color: #1a6b2a;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid #b8d9b8;
+            transition: 0.2s;
+            margin-left: auto;
+        }
+
+        .map-link:hover {
+            color: #0f4a1a;
+            border-bottom-color: #1a6b2a;
+        }
+
+        .suggestion-placeholder {
+            color: #3d6b3d;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        .vehicle-option {
+            display: inline-block;
+            background: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin: 0.2rem 0.3rem;
+            border: 1px solid #b8d9b8;
+            font-size: 0.9rem;
+        }
+
+        .vehicle-option.best {
+            background: #1a6b2a;
+            color: white;
+            border-color: #1a6b2a;
+        }
+
+        .vehicle-option.good {
+            background: #3d8b4a;
+            color: white;
+            border-color: #3d8b4a;
+        }
+
+        .vehicle-option.ok {
+            background: #b17f2e;
+            color: white;
+            border-color: #b17f2e;
+        }
+
+        .points-message {
+            font-size: 0.85rem;
+            color: #3d6b3d;
+        }
+
+     
     .calc-wrapper {
       background: white;
       border-radius: 32px;
@@ -297,3 +586,18 @@
       .input-group label { min-width: auto; }
       .nav-links { gap: 0.2rem 0.8rem; }
     }
+       @media (max-width: 650px) {
+            section {
+                padding: 1.5rem 1rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+            .input-group {
+                max-width: 100%;
+            }
+            .result-box {
+                font-size: 1rem;
+                padding: 0.8rem 1rem;
+            }
+        }
