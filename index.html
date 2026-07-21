@@ -11,9 +11,10 @@
     <nav class="navbar">
       <ul class="nav-links">
         <li><a href="#home"> Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#trip-eco-rating">Eco‑Rating</a></li>
+        <li><a href="#what-to-use-for-travel">What to Use?</a></li>
         <li><a href="#calculator">CO<sub>2</sub> Calculator</a></li>
-        <li><a href="#tip"></i> Tips</a></li>
+        <li><a href="#tip">Tips</a></li>
         <li><a href="#benefits"> Benefits</a></li>
       </ul>
     </nav>
@@ -25,28 +26,83 @@
     <h2>Innovative Green Solutions</h2>
     <p> Inspiring sustainable mobility for a greener future</p>
   </div>
+ <div class="container">
+        <h1>🌍 Eco‑Friendly Transportation</h1>
+        <p class="subtitle">Rate your trip & get the best eco-friendly transport suggestions</p>
 
-   <!-- About Page -->
-  <section id="about">
-    <h2 class="section-title">About Green Mobility</h2>
-    <div class="card-grid">
-      <div class="card">
-    
-        <h3>Clean Energy</h3>
-        <p>Electric vehicles, hydrogen, and solar‑powered transport reduce dependence on fossil fuels.</p>
-      </div>
-      <div class="card">
-   
-        <h3>Shared Mobility</h3>
-        <p>Carpooling, ride‑sharing, and bike‑sharing cut emissions and traffic congestion.</p>
-      </div>
-      <div class="card">
-      
-        <h3>Low‑impact Infrastructure</h3>
-        <p>Green roads, bike lanes, and urban forests make cities healthier and more liveable.</p>
-      </div>
+        <!-- ====== TRIP ECO-RATING SECTION ====== -->
+        <section id="trip-eco-rating" style="background: #e7f3e7;">
+            <h2 class="section-title">Eco‑Rating</h2>
+            <p style="margin-bottom: 0.8rem; font-weight: 500;">Enter your trip details – click "Rate Trip" to earn points based on distance, vehicle &amp; eco‑friendliness!</p>
+
+            <div class="input-row">
+                <div class="input-group" style="max-width: 220px;">
+                    <label for="source">📍 Source</label>
+                    <input type="text" id="source" placeholder="e.g. New York" value="New York" />
+                </div>
+                <div class="input-group" style="max-width: 220px;">
+                    <label for="destination">📍 Destination</label>
+                    <input type="text" id="destination" placeholder="e.g. Boston" value="Boston" />
+                </div>
+                <div class="input-group" style="max-width: 160px;">
+                    <label for="tripDistance">Distance (km)</label>
+                    <input type="number" id="tripDistance" placeholder="km" min="0.1" step="0.1" value="4.5" />
+                </div>
+                <div class="input-group" style="max-width: 200px;">
+                    <label for="vehicleSelect">Vehicle</label>
+                    <select id="vehicleSelect">
+                        <option value="walk">🚶 Walking</option>
+                        <option value="bicycle">🚲 Bicycle</option>
+                        <option value="electric">⚡ Electric car</option>
+                        <option value="hybrid">🔋 Hybrid car</option>
+                        <option value="car" selected>🚗 Gasoline car</option>
+                        <option value="bus">🚌 Bus / tram</option>
+                        <option value="train">🚆 Train</option>
+                        <option value="plane">✈️ Plane</option>
+                    </select>
+                </div>
+                <div class="btn-group">
+                    <button id="rateTripBtn" class="btn-reward">⭐ Rate Trip</button>
+                    <button id="openMapBtn" class="btn-map">🗺️ Open in Maps</button>
+                </div>
+            </div>
+
+            <div id="tripRatingResult" class="result-box" style="background: #eaf9ea; border-left-color: #0d6b1f;">
+                <div class="result-row">
+                    <span id="tripSummary">🗽 → 🏙️ 4.5 km · Walking</span>
+                    <span class="badge-rating" id="ratingBadge">🌿 Excellent</span>
+                    <span style="font-size: 0.95rem; font-weight: 400; color: #144d1f;" id="ratingComment">Zero emissions, healthy!</span>
+                    <span class="reward-badge" id="rewardDisplay">⭐ +0 pts</span>
+                </div>
+                <div class="result-row-bottom">
+                    <span style="font-weight: 400; font-size: 0.95rem; color: #1f4a2a;">🏆 Total points:</span>
+                    <span class="total-points-badge" id="totalPointsDisplay">🌟 0 pts</span>
+                    <span class="points-message" id="pointsMessage">Rate your trip!</span>
+                    <a href="#" id="mapLink" class="map-link" target="_blank">🗺️ View route</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== HOW MUCH DISTANCE DO YOU TRAVEL? SECTION ====== -->
+        <section id="what-to-use-for-travel" style="background: #eaf7ea; border: 1px solid #b8d9b8;">
+            <h2 class="section-title"> What Should I Use?</h2>
+            <p style="margin-bottom: 0.5rem; color: #1f4a2a; font-weight: 500;">Enter your distance and click <strong>"Analyze Transport"</strong> to find the best eco-friendly vehicle for your trip!</p>
+            
+            <div class="input-row">
+                <div class="input-group" style="max-width: 300px;">
+                    <label for="shortDistance">📏 Distance (km)</label>
+                    <input type="number" id="shortDistance" placeholder="Enter distance in km" min="0.1" step="0.1" value="3" />
+                </div>
+                <button onclick="suggestTransport()" style="margin-bottom: 0.8rem;">🚀 Analyze Transport</button>
+            </div>
+
+            <div id="transport-result" class="result-box hidden-suggestion">
+                <div class="suggestion-placeholder">💡 Enter a distance above and click "Analyze Transport" to get vehicle suggestions!</div>
+                <div class="suggestion-content" style="display: none;"></div>
+            </div>
+        </section>
     </div>
-  </section>
+
 
    <!-- Calculator Page -->
   <section id="calculator">
